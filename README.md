@@ -1,6 +1,6 @@
 # Robust Asynchronous FIFO in Verilog
 
-![Verilog]
+
 
 This repository contains the Verilog source code for a robust, production-quality Asynchronous First-In, First-Out (FIFO) memory buffer. The design is specifically engineered to handle Clock Domain Crossing (CDC) safely, making it ideal for complex digital systems, SoCs, and FPGAs where multiple clock sources are present.
 
