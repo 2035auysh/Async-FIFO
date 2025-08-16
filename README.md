@@ -23,7 +23,7 @@ The implementation is based on the industry-proven principles detailed by Cliffo
 
 The FIFO is partitioned into several synchronous modules, which are then integrated into a top-level wrapper. This design style ensures that logic within each module is fully synchronous to a single clock, making it easy for synthesis tools to handle.
 
-!(https://i.imgur.com/your_diagram_image.png)  <!-- **Note:** Replace this with a link to your block diagram image -->
+ <!-- **Note:** Replace this with a link to your block diagram image -->
 
 ### Verilog Modules
 
