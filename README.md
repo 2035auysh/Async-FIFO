@@ -81,3 +81,10 @@ This design's robustness comes from two key principles:
 1.  **Gray Code Pointers**: To avoid metastability when passing multi-bit pointers across clock domains, all pointers are converted to Gray code before being sent through a two-stage synchronizer. Since only one bit changes between consecutive Gray code values, this ensures the synchronized pointer value is always valid.
 
 2.  **Pessimistic Flags**: The `full` and `empty` flags are designed to be "pessimistic." This means the `full` flag might stay asserted for a couple of write clock cycles after a read has occurred, and the `empty` flag might stay asserted for a couple of read clock cycles after a write has occurred. This slight delay is a safe margin that guarantees no writes occur when the FIFO is truly full and no reads occur when it is truly empty.
+
+
+## Note:
+1. This is just to understand that write_pointer always points to the place where there is empty data, 
+2. The read pointer always points to the place where there is data. 
+3. For full condition ( suppose wrt_ptr is at top and the read_ptr is at bottom), so we will increment the wrt_ptr as wrt_ptr_next and then match it with the read_ptr if the same, then it is full. 
+4. For the empty condition as wrt_ptr points to the empty block so we will increment read_ptr as read_ptr_next and then match with the wrt_ptr if the same, then it is empty.
