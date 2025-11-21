@@ -86,5 +86,5 @@ This design's robustness comes from two key principles:
 ## Note:
 1. This is just to understand that write_pointer always points to the place where there is empty data, 
 2. The read pointer always points to the place where there is data. 
-3. For full condition ( suppose wrt_ptr is at top and the read_ptr is at bottom), so we will increment the wrt_ptr as wrt_ptr_next and then match it with the read_ptr if the same, then it is full. 
-4. For the empty condition as wrt_ptr points to the empty block so we will increment read_ptr as read_ptr_next and then match with the wrt_ptr if the same, then it is empty.
+3. For full condition ( suppose wrt_ptr is at top and the read_ptr is at bottom), so we will increment the wrt_ptr as wrt_ptr_next (due to sequential block) and then match it with the read_ptr if the same, then it is full. 
+4. For the empty condition as wrt_ptr points to the empty block so we will increment read_ptr as read_ptr_next (due to sequential block) and then match with the wrt_ptr if the same, then it is empty.
